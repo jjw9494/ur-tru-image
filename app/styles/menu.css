@@ -1,0 +1,164 @@
+/* Container styles */
+.menu-container {
+	top: 0;
+	width: 100%;
+	overflow-x: hidden;
+	position: absolute;
+	background-color: black;
+	color: white;
+	display: flex;
+	min-height: 390px;
+	flex-direction: column;
+	padding-top: 1.25rem;
+}
+
+.menu-head-container {
+	display: flex;
+	height: 44px;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.menu-head-container > a > svg {
+	height: 44px;
+	width: 71px;
+	padding-left: 1rem;
+}
+
+/* Close button styles */
+
+.close-button-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-top: 7px;
+	padding-right: 1rem;
+	width: auto;
+	/* justify-content: space-between; */
+}
+
+.close-button-container > svg {
+	padding-bottom: 5.2px;
+	padding-left: 6px;
+}
+
+#close-menu-button {
+	all: unset;
+	font-size: 1.25rem;
+}
+
+/* Link styles */
+ul {
+	padding-right: 1rem;
+	list-style: none;
+	text-align: right;
+	font-size: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 1.5rem;
+}
+
+.menu-links {
+	height: 270px;
+}
+
+.menu-links > ul > a:visited {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	list-style: none;
+}
+
+.menu-links :active {
+	color: rgb(255, 255, 255);
+}
+
+.menu-links > ul > a {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	list-style: none;
+}
+
+/* Desktop styles */
+@media (min-width: 720px) {
+	.menu-container > a > svg {
+		transform: scale(1.5);
+	}
+
+	.menu-links {
+		padding-right: 2rem;
+	}
+
+	.menu-links > ul {
+		justify-content: flex-end;
+		flex-direction: row;
+		text-align: left;
+		text-decoration: none;
+	}
+
+	.menu-links > ul :hover {
+		cursor: pointer !important;
+		text-decoration: underline;
+		text-underline-offset: 10px;
+		transition: width 1s;
+	}
+
+	.menu-head-container {
+		display: none;
+	}
+
+	.menu-container {
+		background-color: transparent;
+		color: rgb(16, 15, 15);
+	}
+	.menu-links > ul > a:visited {
+		color: rgb(0, 0, 0);
+		text-decoration: none;
+		list-style: none;
+	}
+
+	.menu-links :active {
+		color: rgb(65, 65, 65);
+	}
+
+	.menu-links > ul > a {
+		color: rgb(0, 0, 0);
+		text-decoration: none;
+		list-style: none;
+	}
+}
+
+/* Tablet styles */
+@media (min-width: 720px) and (max-width: 840px) {
+	.menu-links {
+		padding-right: 2rem;
+	}
+
+	.menu-container {
+		padding-top: 0;
+	}
+
+	.menu-links > ul {
+		padding-top: 10px;
+	}
+	.menu-container {
+		background-color: transparent;
+		color: rgb(255, 255, 255);
+	}
+
+	.menu-links > ul > a:visited {
+		color: rgb(0, 0, 0);
+		text-decoration: none;
+		list-style: none;
+	}
+
+	.menu-links :active {
+		color: rgb(65, 65, 65);
+	}
+
+	.menu-links > ul > a {
+		color: rgb(0, 0, 0);
+		text-decoration: none;
+		list-style: none;
+	}
+}

@@ -1,0 +1,86 @@
+/* Container styles */
+.nav-container {
+	display: flex;
+	height: 45px;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-block: 1.25rem;
+	margin-inline: 1rem;
+	align-items: center;
+}
+
+.nav-container > a > svg {
+	padding-top: 7px;
+	height: 44px;
+	width: 71px;
+}
+
+/* Menu/Filter button styles */
+
+.buttons-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-top: 4px;
+	justify-content: space-between;
+	width: 160px;
+}
+
+.buttons-container > p {
+	padding-bottom: 4px;
+}
+
+.menu-logo > svg {
+	padding-bottom: 1.2px;
+	padding-left: 6px;
+}
+
+.menu-logo {
+	padding-top: 2px;
+}
+
+#filter-button,
+#menu-button {
+	all: unset;
+	font-size: 1.25rem;
+}
+
+/* Desktop styles */
+
+@media (min-width: 720px) {
+	.buttons-container {
+		display: none;
+	}
+}
+
+@media (min-width: 840px) {
+	.nav-container > a > svg {
+		transform: scale(1.5);
+	}
+
+	.nav-container {
+		height: 66px;
+		margin-block: 2rem;
+	}
+
+	.nav-container > a > svg {
+		width: 106.5px;
+		padding-left: 3rem;
+	}
+}
+
+/* Tablet styless */
+
+@media (min-width: 720px) and (max-width: 840px) {
+	.nav-container {
+		padding-bottom: 3rem;
+	}
+	.nav-container > a > svg {
+		width: 106.5px;
+		padding-left: 1rem;
+	}
+
+	.menu-links {
+		padding-right: 1rem;
+	}
+}
