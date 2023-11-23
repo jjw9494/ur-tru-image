@@ -1,4 +1,3 @@
-// FILEPATH: /C:/Users/thoma/Documents/sideProjects/tt-next/tt-site/app/Filter.test.tsx
 import { render, fireEvent } from "@testing-library/react";
 import Filter from "@/app/components/Filter";
 

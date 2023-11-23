@@ -28,7 +28,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/loading.js",
-    "__tests__/home.test.jsx"
+    "__tests__/home.test.tsx"
   ],
   "exclude": ["node_modules"],
   "types": ["node", "jest", "@testing-library/jest-dom"]

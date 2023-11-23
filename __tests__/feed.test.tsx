@@ -1,5 +1,4 @@
 import Feed from "@/app/components/Feed";
-// FILEPATH: /C:/Users/thoma/Documents/sideProjects/tt-next/tt-site/app/Feed.test.tsx
 import { render, waitFor } from "@testing-library/react";
 import { request } from "graphql-request";
 
