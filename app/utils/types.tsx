@@ -29,7 +29,7 @@ export interface SearchProps {
 	close: () => void;
 	searchValue: string;
 	handleSearchInputValue: (value: string) => void;
-	closeOnEnter;
+	closeOnEnte: any;
 }
 
 export interface TFeedObject {
@@ -38,7 +38,8 @@ export interface TFeedObject {
 	dateAdded: any;
 	eyebrowHeader: string;
 	id: string;
-	contentImage: string;
+	contentImage: { url: string };
+
 	imageDescription: string;
 	linkTitle: string;
 	linkUrl: string;
