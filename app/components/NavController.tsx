@@ -1,28 +1,26 @@
-"use client";
+"use-client";
 import { useState, useEffect } from "react";
 import NavHead from "./NavHead";
 import Filter from "./Filter";
 import Menu from "./Menu";
 import Search from "./Search";
 import { navProps } from "../utils/types";
-import { useWindowDimensions } from "../hooks/useWindowDimension";
 import { usePathname } from "next/navigation";
 
 const NavController: React.FC<navProps> = (props: navProps) => {
-	const { width, height } = useWindowDimensions();
-
 	const [navState, setNavState] = useState("closed");
-	const [windowWidth, setWindowWidth] = useState(width);
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
 	// Returns window width to toggle navigation depending on screen size
 	useEffect(() => {
 		window.addEventListener("resize", function () {
-			setWindowWidth(width);
+			setWindowWidth(window.innerWidth);
 		});
 
 		return window.removeEventListener("resize", function () {
-			setWindowWidth(width);
+			setWindowWidth(window.innerWidth);
 		});
-	}, [width]);
+	}, []);
 
 	const pathname = usePathname();
 
@@ -133,6 +131,7 @@ const NavController: React.FC<navProps> = (props: navProps) => {
 			} else if (navState === "search") {
 				return (
 					<Search
+						closeOnEnter={handleKeyDown}
 						searchValue={props.searchValue}
 						handleSearchInputValue={props.handleSearchInputValue}
 						close={handleCloseButtonClick}
