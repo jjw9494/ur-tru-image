@@ -29,7 +29,7 @@ export interface SearchProps {
 	close: () => void;
 	searchValue: string;
 	handleSearchInputValue: (value: string) => void;
-	closeOnEnte: any;
+	closeOnEnter: any;
 }
 
 export interface TFeedObject {
