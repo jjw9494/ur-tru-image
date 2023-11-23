@@ -265,7 +265,7 @@ const Feed: React.FC<feedProps> = ({ searchValue, filterValue }) => {
 								fill="#111111"
 							/>
 						</svg>
-						<a href="{e.linkAddress}">{e.linkTitle}</a>
+						<a href={e.linkUrl}>{e.linkTitle}</a>
 					</span>
 				) : (
 					""

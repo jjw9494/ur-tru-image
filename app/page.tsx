@@ -13,14 +13,14 @@ export default function Home() {
 	const createQueryString = useCallback(
 		(value: string) => {
 			const params = new URLSearchParams(searchParams);
-			params.set("search", value);
+			params.set("q", value);
 
 			return params.toString();
 		},
 		[searchParams]
 	);
 
-	const searchValue = searchParams.get("search") || "";
+	const searchValue = searchParams.get("q") || "";
 
 	const [filterValue, setFilterValue] = useState("");
 

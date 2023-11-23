@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import TextField from "@mui/material/TextField";
 import "../styles/search.css";
 import { SearchProps } from "../utils/types";
@@ -19,13 +19,11 @@ const Search: React.FC<SearchProps> = ({
 	return (
 		<div className="search-container">
 			<div className="search-close-button-container">
-
 				<label htmlFor="close-search-button">
 					<button type="button" id="close-search-button" onClick={close}>
 						CLOSE
 					</button>
 				</label>
-
 
 				<svg
 					width="12"

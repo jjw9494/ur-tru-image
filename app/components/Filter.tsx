@@ -1,5 +1,5 @@
-"use client"
-import { useState } from "react";
+"use client";
+import { useState, useEffect } from "react";
 import "../styles/filter.css";
 import { FilterProps } from "../utils/types";
 
@@ -60,7 +60,10 @@ const Filter: React.FC<FilterProps> = ({ close, filterFunc }) => {
 	};
 
 	// Filters sent up to the Feed component to be filtered and mapped
-	filterFunc(filters);
+	useEffect(() => {
+		// Call filterFunc after the component has been rendered
+		filterFunc(filters);
+	}, [filterFunc, filters]);
 
 	// console.log(checkedState);
 

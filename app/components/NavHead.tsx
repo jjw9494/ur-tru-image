@@ -1,9 +1,11 @@
-"use client"
+"use client";
 import "../styles/nav-head.css";
 import { NavHeadProps } from "../utils/types";
+import { usePathname } from "next/navigation";
 
 const NavHead: React.FC<NavHeadProps> = (props: NavHeadProps) => {
 	// Render the closed Nav head, TT Logo and then Menu/Filter on smaller screens
+	const pathname = usePathname();
 	return (
 		<nav>
 			<div className="nav-container">
@@ -18,12 +20,18 @@ const NavHead: React.FC<NavHeadProps> = (props: NavHeadProps) => {
 					</svg>
 				</a>
 				<div className="buttons-container">
-					<label htmlFor="filter-button">
-						<button type="button" id="filter-button" onClick={props.filter}>
-							FILTER
-						</button>
-					</label>
-					<p aria-hidden="true">|</p>
+					{pathname === "/" ? (
+						<>
+							<label htmlFor="filter-button">
+								<button type="button" id="filter-button" onClick={props.filter}>
+									FILTER
+								</button>
+							</label>
+							<p aria-hidden="true">|</p>
+						</>
+					) : (
+						<div className="menu-spacer"></div>
+					)}
 					<div className="menu-logo">
 						<label htmlFor="menu-button">
 							<button type="button" id="menu-button" onClick={props.menu}>

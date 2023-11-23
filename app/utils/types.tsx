@@ -35,11 +35,10 @@ export interface SearchProps {
 export interface TFeedObject {
 	contentType: string;
 	createdAt: string;
-	dateAdded: string;
+	dateAdded: any;
 	eyebrowHeader: string;
 	id: string;
 	contentImage: string;
-
 	imageDescription: string;
 	linkTitle: string;
 	linkUrl: string;
@@ -47,4 +46,21 @@ export interface TFeedObject {
 	publishedAt: string;
 	subheading: string;
 	updatedAt: string;
+}
+
+export interface TArtistsObjects {
+	contentType: string;
+	createdAt: string;
+	dateAdded: any;
+	eyebrowHeader: string;
+	id: string;
+	contentImage: string;
+	imageDescription: string;
+	linkTitle: string;
+	linkUrl: string;
+	mainTitle: string;
+	publishedAt: string;
+	subheading: string;
+	updatedAt: string;
+	bandcampUrl: string;
 }

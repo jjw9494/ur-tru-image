@@ -16,6 +16,7 @@ body {
 	display: flex;
 	width: auto;
 	margin-inline: auto;
+	justify-content: center;
 }
 
 .my-masonry-grid_column {

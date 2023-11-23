@@ -24,9 +24,7 @@ const NavController: React.FC<navProps> = (props: navProps) => {
 		});
 	}, [width]);
 
-	// const pathname = usePathname();
-
-	// console.log(router);
+	const pathname = usePathname();
 
 	// Opens Menu Dropdown on smaller screens
 	const handleMenuButtonClick = () => {
@@ -76,10 +74,12 @@ const NavController: React.FC<navProps> = (props: navProps) => {
 						close={handleCloseButtonClick}
 						search={handleSearchButtonClick}
 					/>
-					<Filter
-						close={handleCloseButtonClick}
-						filterFunc={props.filterFunc}
-					/>
+					{pathname === "/" && (
+						<Filter
+							close={handleCloseButtonClick}
+							filterFunc={props.filterFunc}
+						/>
+					)}
 					{navState === "search" ? (
 						<Search
 							searchValue={props.searchValue}
