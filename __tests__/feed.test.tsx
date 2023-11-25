@@ -31,15 +31,7 @@ describe("Feed", () => {
     });
 
     expect(feedTitle).toBeInTheDocument();
-  });
-
-  //   it("Feed renders feed", () => {
-  //     render(<Feed searchValue="" filterValue="" />);
-
-  //     const feed = screen.getByTestId("feed-container");
-
-  //     expect(feed).toBeInTheDocument();
-  //   });
+  })
 
   // Mock Fetch
   it("calls request function on mount", async () => {

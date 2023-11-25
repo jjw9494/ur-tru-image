@@ -2,6 +2,7 @@
 import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+
 import Loading from "./loading";
 
 const DynamicNavController = dynamic(
@@ -39,17 +40,19 @@ export default function Home() {
 		setFilterValue(value);
 	};
 
+	function handleSearchInputValue(input: string) {
+		const queryString = createQueryString(input);
+		return router.replace(pathname + "?" + queryString, {
+			scroll: false,
+			shallow: false,
+		});
+	}
+
 	return (
 		<>
 			<DynamicNavController
 				searchValue={searchValue}
-				handleSearchInputValue={(input) => {
-					const queryString = createQueryString(input);
-					return router.replace(pathname + "?" + queryString, {
-						scroll: false,
-						shallow: false,
-					});
-				}}
+				handleSearchInputValue={handleSearchInputValue}
 				filterValue={filterValue}
 				filterFunc={filterValueInput}
 			/>

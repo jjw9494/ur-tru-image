@@ -22,7 +22,7 @@ const Menu: React.FC<MenuProps> = (props: MenuProps) => {
 				</Link>
 				<div className="close-button-container">
 					<label htmlFor="close-menu-button">
-						<button type="button" id="close-menu-button" onClick={props.close}>
+						<button type="button" data-testid="close-menu-button" id="close-menu-button" onClick={props.close}>
 							CLOSE
 						</button>
 					</label>

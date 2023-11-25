@@ -81,7 +81,12 @@ const Filter: React.FC<FilterProps> = ({ close, filterFunc }) => {
 				</svg>
 				<div className="close-button-container">
 					<label htmlFor="close-filter-button">
-						<button type="button" id="close-filter-button" onClick={close}>
+						<button
+							type="button"
+							data-testid="close-filter-button"
+							id="close-filter-button"
+							onClick={close}
+						>
 							CLOSE
 						</button>
 					</label>

@@ -1,4 +1,4 @@
-"use-client";
+"use client";
 import { useState, useEffect } from "react";
 import NavHead from "./NavHead";
 import Filter from "./Filter";
