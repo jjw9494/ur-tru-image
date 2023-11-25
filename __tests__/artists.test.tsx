@@ -1,76 +1,89 @@
 import {
-	render,
-	act,
-	screen,
-	cleanup,
-	fireEvent,
+  render,
+  act,
+  screen,
+  cleanup,
+  fireEvent,
 } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Artists from "../app/artists/page";
 
 //Cleanup
 afterEach(() => {
-	cleanup();
+  cleanup();
 });
 
 //Window Width setter
 const resizeWindow = (x: number) => {
-	window.innerWidth = x;
-	window.dispatchEvent(new Event("resize"));
+  window.innerWidth = x;
+  window.dispatchEvent(new Event("resize"));
 };
 
 describe("Artists Component", () => {
-	it("renders without crashing", () => {
-		render(<Artists />);
-	});
+  it("renders without crashing", () => {
+    render(<Artists />);
+  });
 
-	it("renders a h1 element with the text content Artists.", () => {
-		render(<Artists />);
+  it("renders a h1 element with the text content Artists.", () => {
+    render(<Artists />);
 
-		const heading = screen.getByRole("heading", {
-			name: /artists./i,
-			level: 1,
-		});
+    const heading = screen.getByRole("heading", {
+      name: /artists./i,
+      level: 1,
+    });
 
-		expect(heading).toBeInTheDocument();
-	});
+    expect(heading).toBeInTheDocument();
+  });
 
-	//Nav tests
-	it("renders a Feed in the Artists page.", async () => {
-		render(<Artists />);
+  //Nav tests
+  it("renders a Feed in the Artists page.", async () => {
+    render(<Artists />);
 
-		const feed = screen.getByTestId("artists-feed-container");
+    const feed = screen.getByTestId("artists-feed-container");
 
-		expect(feed).toBeInTheDocument();
-	});
+    expect(feed).toBeInTheDocument();
+  });
 
-	//Desktop tests
-	it("renders a Closed Nav in the Artists page.", async () => {
-		render(<Artists />);
+  //Desktop tests
+  it("renders a Closed Nav in the Artists page.", async () => {
+    render(<Artists />);
 
-		const closedNav = screen.getByTestId("nav-container");
+    const closedNav = screen.getByTestId("nav-container");
 
-		expect(closedNav).toBeInTheDocument();
-	});
+    expect(closedNav).toBeInTheDocument();
+  });
 
-	it("renders a open Menu in the Artists page on desktop.", async () => {
-		render(<Artists />);
+  it("renders a open Menu in the Artists page on desktop.", async () => {
+    render(<Artists />);
 
-		const openMenu = screen.getByTestId("menu-container");
+    const openMenu = screen.getByTestId("menu-container");
 
-		expect(openMenu).toBeInTheDocument();
-	});
+    expect(openMenu).toBeInTheDocument();
+  });
+  it("renders Menu links.", async () => {
+    render(<Artists />);
 
-	//Mobile tests
+    const feed = screen.getByText("Feed");
+    const artists = screen.getByText("Artists");
+    const shop = screen.getByText("Shop");
+    const about = screen.getByText("About");
 
-	it("renders a open Menu in the Artists page on mobile.", async () => {
-		resizeWindow(600);
-		render(<Artists />);
+    expect(feed).toBeInTheDocument();
+    expect(artists).toBeInTheDocument();
+    expect(shop).toBeInTheDocument();
+    expect(about).toBeInTheDocument();
+  });
 
-		fireEvent.click(screen.getByText(/menu/i));
+  //Mobile tests
 
-		const openMenu = screen.getByTestId("menu-container");
+  it("renders a open Menu in the Artists page on mobile.", async () => {
+    resizeWindow(600);
+    render(<Artists />);
 
-		expect(openMenu).toBeInTheDocument();
-	});
+    fireEvent.click(screen.getByText(/menu/i));
+
+    const openMenu = screen.getByTestId("menu-container");
+
+    expect(openMenu).toBeInTheDocument();
+  });
 });
