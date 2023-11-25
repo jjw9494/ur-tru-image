@@ -1,5 +1,4 @@
 export interface feedProps {
-	searchValue: string;
 	filterValue: string;
 }
 
@@ -14,9 +13,7 @@ export interface MenuProps {
 }
 
 export interface navProps {
-	searchValue: string;
 	filterValue: string;
-	handleSearchInputValue: (value: string) => void;
 	filterFunc: (value: string) => void;
 }
 
@@ -27,8 +24,6 @@ export interface NavHeadProps {
 
 export interface SearchProps {
 	close: () => void;
-	searchValue: string;
-	handleSearchInputValue: (value: string) => void;
 	closeOnEnter: any;
 }
 
@@ -39,7 +34,6 @@ export interface TFeedObject {
 	eyebrowHeader: string;
 	id: string;
 	contentImage: { url: string };
-
 	imageDescription: string;
 	linkTitle: string;
 	linkUrl: string;

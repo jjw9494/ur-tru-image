@@ -14,8 +14,8 @@ export default function About() {
 	return (
 		<>
 			<DynamicNavController
-				searchValue={""}
-				handleSearchInputValue={() => ""}
+				
+			
 				filterValue={"filterValue"}
 				filterFunc={() => ""}
 			/>

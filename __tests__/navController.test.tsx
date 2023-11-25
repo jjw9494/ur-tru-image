@@ -20,27 +20,25 @@ jest.mock("next/navigation", () => ({
 describe("NavController Component", () => {
 	it("renders without crashing", () => {
 		const mockFilterFunc = jest.fn();
-		const mockSearchInputValue = jest.fn();
+	
 
 		render(
 			<NavController
 				filterFunc={mockFilterFunc}
 				filterValue={""}
-				searchValue=""
-				handleSearchInputValue={mockSearchInputValue}
+
 			/>
 		);
 	});
 
 	it("renders MENU", () => {
 		const mockFilterFunc = jest.fn();
-		const mockSearchInputValue = jest.fn();
+
 		render(
 			<NavController
 				filterFunc={mockFilterFunc}
 				filterValue={""}
-				searchValue=""
-				handleSearchInputValue={mockSearchInputValue}
+
 			/>
 		);
 
@@ -51,13 +49,12 @@ describe("NavController Component", () => {
 
 	it("renders MENU items onClick (Desktop)", () => {
 		const mockFilterFunc = jest.fn();
-		const mockSearchInputValue = jest.fn();
+		
 		render(
 			<NavController
 				filterFunc={mockFilterFunc}
 				filterValue={""}
-				searchValue=""
-				handleSearchInputValue={mockSearchInputValue}
+	
 			/>
 		);
 
@@ -80,13 +77,12 @@ describe("NavController Component", () => {
 	it("renders MENU items onClick (mobile)", () => {
 		resizeWindow(600);
 		const mockFilterFunc = jest.fn();
-		const mockSearchInputValue = jest.fn();
+		
 		render(
 			<NavController
 				filterFunc={mockFilterFunc}
 				filterValue={""}
-				searchValue=""
-				handleSearchInputValue={mockSearchInputValue}
+	
 			/>
 		);
 
@@ -120,13 +116,12 @@ describe("NavController Component", () => {
 	it("renders Filter items onClick (Desktop)", () => {
 		resizeWindow(1000);
 		const mockFilterFunc = jest.fn();
-		const mockSearchInputValue = jest.fn();
+
 		render(
 			<NavController
 				filterFunc={mockFilterFunc}
 				filterValue={""}
-				searchValue=""
-				handleSearchInputValue={mockSearchInputValue}
+	
 			/>
 		);
 
@@ -148,13 +143,12 @@ describe("NavController Component", () => {
 	it("renders Filter items onClick (mobile)", () => {
 		resizeWindow(600);
 		const mockFilterFunc = jest.fn();
-		const mockSearchInputValue = jest.fn();
 		render(
 			<NavController
 				filterFunc={mockFilterFunc}
 				filterValue={""}
-				searchValue=""
-				handleSearchInputValue={mockSearchInputValue}
+			
+		
 			/>
 		);
 
@@ -190,13 +184,12 @@ describe("NavController Component", () => {
 	it("test function calls", () => {
 	  resizeWindow(1000);
 	  const mockFilterFunc = jest.fn();
-	  const mockSearchInputValue = jest.fn();
+	
 	  render(
 	    <NavController
 	      filterFunc={mockFilterFunc}
 	      filterValue={""}
-	      searchValue=""
-	      handleSearchInputValue={mockSearchInputValue}
+
 	    />
 	  );
 

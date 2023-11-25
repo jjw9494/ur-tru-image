@@ -17,8 +17,8 @@ export default function Artists() {
   return (
     <>
       <DynamicNavController
-        searchValue={""}
-        handleSearchInputValue={() => ""}
+       
+       
         filterValue={""}
         filterFunc={() => ""}
       />

@@ -9,17 +9,17 @@ afterEach(() => {
 
 describe("Search Component", () => {
   it("renders without crashing and mock functions", () => {
-    const mockHandleSearchInputValue = jest.fn();
+ 
     const mockClose = jest.fn();
     const mockCloseOnEnter = jest.fn();
-    const searchValue = "initialValue";
+   
 
     render(
       <Search
-        handleSearchInputValue={mockHandleSearchInputValue}
+      
         close={mockClose}
         closeOnEnter={mockCloseOnEnter}
-        searchValue={searchValue}
+     
       />
     );
 
@@ -28,39 +28,20 @@ describe("Search Component", () => {
     expect(searchContainer).toBeInTheDocument();
   });
 
-  it("calls handleSearchInputValue when input value changes", () => {
-    const mockHandleSearchInputValue = jest.fn();
-    const mockClose = jest.fn();
-    const mockCloseOnEnter = jest.fn();
-    const searchValue = "initialValue";
 
-    const { getByLabelText } = render(
-      <Search
-        handleSearchInputValue={mockHandleSearchInputValue}
-        close={mockClose}
-        closeOnEnter={mockCloseOnEnter}
-        searchValue={searchValue}
-      />
-    );
-
-    const searchInput = getByLabelText("Type to search...");
-    fireEvent.change(searchInput, { target: { value: "test" } });
-
-    expect(mockHandleSearchInputValue).toHaveBeenCalledWith("test");
-  });
 
   it("calls close function when close button is clicked", () => {
-    const mockHandleSearchInputValue = jest.fn();
+   
     const mockClose = jest.fn();
     const mockCloseOnEnter = jest.fn();
-    const searchValue = "initialValue";
+    
 
     const { getByText } = render(
       <Search
-        handleSearchInputValue={mockHandleSearchInputValue}
+        
         close={mockClose}
         closeOnEnter={mockCloseOnEnter}
-        searchValue={searchValue}
+      
       />
     );
 

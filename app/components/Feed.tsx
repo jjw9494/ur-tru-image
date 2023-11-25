@@ -4,9 +4,10 @@ import "../styles/Feed.css";
 import Masonry from "react-masonry-css";
 import { feedProps, TFeedObject } from "../utils/types";
 import { request } from "graphql-request";
+import { useSearchParams } from "next/navigation";
 
 // searchValue and filterValue are the values returned from the search and filter functions
-const Feed: React.FC<feedProps> = ({ searchValue, filterValue }) => {
+const Feed: React.FC<feedProps> = ({ filterValue }) => {
 	const [db, setDb] = useState<TFeedObject[]>([]);
 
 	// Fetch data from GraphQL server
@@ -209,7 +210,9 @@ const Feed: React.FC<feedProps> = ({ searchValue, filterValue }) => {
 	}
 
 	// Takes in search string from search page input
-	const searchWords = searchValue.toLowerCase().split(" ");
+	const searchParams = useSearchParams();
+	const updatedSearchParams: string | null = searchParams.get("q") ?? "";
+	const searchWords = updatedSearchParams.toLowerCase().split(" ");
 
 	// Takes in filter parameters from filter checkboxes
 	let filterWords: string[] = [];

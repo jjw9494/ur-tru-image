@@ -7,12 +7,12 @@ jest.mock("graphql-request");
 
 describe("Feed", () => {
   it("renders without crashing", () => {
-    render(<Feed searchValue="" filterValue="" />);
+    render(<Feed filterValue="" />);
   });
 
   // Render Tests
   it("Feed renders Heading", () => {
-    render(<Feed searchValue="" filterValue="" />);
+    render(<Feed filterValue="" />);
 
     const feedTitle = screen.getByRole("heading", {
       name: "London Record Label & Occasional Function.",
@@ -23,7 +23,7 @@ describe("Feed", () => {
   });
 
   it("Feed renders Empty Feed", () => {
-    render(<Feed searchValue="" filterValue="" />);
+    render(<Feed  filterValue="" />);
 
     const feedTitle = screen.getByRole("heading", {
       name: "Nothing to Display",
@@ -38,7 +38,7 @@ describe("Feed", () => {
     const mockRequest = request as jest.MockedFunction<typeof request>;
     mockRequest.mockResolvedValueOnce({ tFeedObjects: [] });
 
-    render(<Feed searchValue="" filterValue="" />);
+    render(<Feed  filterValue="" />);
 
     await waitFor(() => {
       expect(mockRequest).toHaveBeenCalledWith(

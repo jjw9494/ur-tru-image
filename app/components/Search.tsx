@@ -1,15 +1,35 @@
 "use client";
 import TextField from "@mui/material/TextField";
+import React from "react";
 import "../styles/search.css";
 import { SearchProps } from "../utils/types";
 import Link from "next/link";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 
-const Search: React.FC<SearchProps> = ({
-	handleSearchInputValue,
-	close,
-	searchValue,
-	closeOnEnter,
-}) => {
+const Search: React.FC<SearchProps> = ({ close, closeOnEnter }) => {
+	const router = useRouter();
+	const pathname = usePathname();
+	const searchParams = useSearchParams()!;
+
+	const createQueryString = React.useCallback(
+		(value: string) => {
+			const params = new URLSearchParams(searchParams);
+			params.set("q", value);
+
+			return params.toString();
+		},
+		[searchParams]
+	);
+
+	function handleSearchInputValue(input: string) {
+		const queryString = createQueryString(input);
+		return router.replace(pathname + "?" + queryString, {
+			scroll: false,
+			shallow: false,
+		});
+	}
+
 	// Return search input value and push up to parent
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { value } = e.target;
@@ -45,7 +65,6 @@ const Search: React.FC<SearchProps> = ({
 			<div className="search-input-container">
 				{/* TextField input from MUI */}
 				<TextField
-					value={searchValue}
 					onChange={handleChange}
 					onKeyDown={closeOnEnter}
 					className="search-styles"

@@ -80,8 +80,6 @@ const NavController: React.FC<navProps> = (props: navProps) => {
 					)}
 					{navState === "search" ? (
 						<Search
-							searchValue={props.searchValue}
-							handleSearchInputValue={props.handleSearchInputValue}
 							close={handleCloseButtonClick}
 							closeOnEnter={handleKeyDown}
 						/>
@@ -130,12 +128,7 @@ const NavController: React.FC<navProps> = (props: navProps) => {
 				);
 			} else if (navState === "search") {
 				return (
-					<Search
-						closeOnEnter={handleKeyDown}
-						searchValue={props.searchValue}
-						handleSearchInputValue={props.handleSearchInputValue}
-						close={handleCloseButtonClick}
-					/>
+					<Search closeOnEnter={handleKeyDown} close={handleCloseButtonClick} />
 				);
 			}
 		}

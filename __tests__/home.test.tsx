@@ -8,8 +8,6 @@ import {
 } from "@testing-library/react";
 import Home from "@/app/page";
 import "@testing-library/jest-dom";
-import { useRouter } from "next/router";
-import { BrowserRouter, MemoryRouter } from "react-router-dom";
 
 //Cleanup
 afterEach(() => {
