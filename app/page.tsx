@@ -2,7 +2,7 @@
 import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import Loading from "./loading.js";
+import Loading from "./loading";
 
 const DynamicNavController = dynamic(
 	() => import("../app/components/NavController"),

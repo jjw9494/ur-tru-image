@@ -8,7 +8,7 @@ const NavHead: React.FC<NavHeadProps> = (props: NavHeadProps) => {
 	const pathname = usePathname();
 	return (
 		<nav>
-			<div className="nav-container">
+			<div className="nav-container" data-testid="nav-container">
 				<a>
 					<svg fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path

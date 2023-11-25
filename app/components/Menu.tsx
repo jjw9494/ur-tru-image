@@ -8,7 +8,7 @@ const Menu: React.FC<MenuProps> = (props: MenuProps) => {
 	const pathname = usePathname();
 	// Render nav/dropdown menu
 	return (
-		<div className="menu-container">
+		<div className="menu-container" data-testid="menu-container">
 			<div className="menu-head-container">
 				<Link href="/">
 					<svg fill="none" xmlns="http://www.w3.org/2000/svg">

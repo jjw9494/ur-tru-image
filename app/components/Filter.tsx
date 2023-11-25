@@ -68,7 +68,7 @@ const Filter: React.FC<FilterProps> = ({ close, filterFunc }) => {
 	// console.log(checkedState);
 
 	return (
-		<div className="filter-container">
+		<div className="filter-container" data-testid="filter-container">
 			{/* Container for the dropdown Logo/CLOSE button */}
 			<div className="filter-head-container">
 				<svg fill="none" xmlns="http://www.w3.org/2000/svg">

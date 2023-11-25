@@ -49,7 +49,7 @@ const ArtistsFeed = () => {
 		.sort((a, b) => a.mainTitle.localeCompare(b.mainTitle))
 		// Map out Array into HTML format
 		.map((e) => (
-			<div key={e.id} className="card">
+			<div key={e.id} className="card" data-testid="card">
 				<a href={e.bandcampUrl} target="_blank">
 					{/* eslint-disable-next-line @next/next/no-img-element */}
 					<img src={e.linkUrl} alt={e.imageDescription} />
@@ -84,10 +84,10 @@ const ArtistsFeed = () => {
 	return (
 		<>
 			<div className="home__title-div">
-				<h1 className="home__title">ARTISTS</h1>
+				<h1 className="home__title">ARTISTS.</h1>
 			</div>
 
-			<div className="feed-container">
+			<div className="feed-container" data-testid="artists-feed-container">
 				<Masonry
 					breakpointCols={breakpoints}
 					className="my-masonry-grid"
