@@ -17,7 +17,7 @@ const Search: React.FC<SearchProps> = ({
 	};
 
 	return (
-		<div className="search-container">
+		<div className="search-container" data-testid="search-container">
 			<div className="search-close-button-container">
 				<label htmlFor="close-search-button">
 					<button type="button" id="close-search-button" onClick={close}>

@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/loading.tsx",
+    "app/loading.js",
     "__tests__/home.test.tsx"
   ],
   "exclude": ["node_modules"],
