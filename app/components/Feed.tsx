@@ -211,7 +211,7 @@ const Feed: React.FC<feedProps> = ({ filterValue }) => {
 
 	// Takes in search string from search page input
 	const searchParams = useSearchParams();
-	const updatedSearchParams: string | null = searchParams.get("q") ?? "";
+	const updatedSearchParams = searchParams ? searchParams.get("q") || "" : "";
 	const searchWords = updatedSearchParams.toLowerCase().split(" ");
 
 	// Takes in filter parameters from filter checkboxes
@@ -296,7 +296,7 @@ const Feed: React.FC<feedProps> = ({ filterValue }) => {
 					<br></br>
 					<br></br>
 					<br></br>
-					<h2>Nothing to Display</h2>
+					<h2 data-testid="feed-container">Nothing to Display</h2>
 				</>
 			) : (
 				<div className="feed-container" data-testid="feed-container">

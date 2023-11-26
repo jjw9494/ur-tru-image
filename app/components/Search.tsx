@@ -1,22 +1,24 @@
 "use client";
 import TextField from "@mui/material/TextField";
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/search.css";
 import { SearchProps } from "../utils/types";
-import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
 
 const Search: React.FC<SearchProps> = ({ close, closeOnEnter }) => {
 	const router = useRouter();
 	const pathname = usePathname();
 	const searchParams = useSearchParams()!;
 
+	useEffect(() => {
+		// Access router here
+		console.log(router);
+	}, [router]);
+
 	const createQueryString = React.useCallback(
 		(value: string) => {
 			const params = new URLSearchParams(searchParams);
-			params.set("q", value);
-
+			params.set("q", value ?? "");
 			return params.toString();
 		},
 		[searchParams]
