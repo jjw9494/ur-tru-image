@@ -75,6 +75,6 @@ const Search: React.FC<SearchProps> = ({ close, closeOnEnter }) => {
 			</div>
 		</div>
 	);
-};
+};   
 
 export default Search;
