@@ -18,7 +18,7 @@ const Search: React.FC<SearchProps> = ({ close, closeOnEnter }) => {
 			return params.toString();
 		},
 		[searchParams]
-	);
+	);  
 
 	const [inputValue, setInputValue] = useState("");
 
