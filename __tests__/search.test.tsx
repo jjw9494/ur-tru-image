@@ -1,24 +1,24 @@
-import { render, fireEvent, screen, waitFor } from "@testing-library/react";
+import {
+	render,
+	fireEvent,
+	screen,
+	waitFor,
+	cleanup,
+} from "@testing-library/react";
 import Search from "@/app/components/Search";
 import "@testing-library/jest-dom";
 
-// Mock next/router module
-jest.mock("next/router", () => ({
-	useRouter: jest.fn(),
-}));
+//Cleanup
+beforeEach(() => {
+	cleanup();
+});
+
+jest.mock("next/navigation");
 
 describe("Search Component", () => {
 	it("renders without crashing and mock functions", async () => {
 		const mockClose = jest.fn();
 		const mockCloseOnEnter = jest.fn();
-
-		// Mock the useRouter implementation
-		const useRouterMock = jest.requireMock("next/router").useRouter;
-		useRouterMock.mockImplementation(() => ({
-			pathname: "/",
-			query: {},
-			push: jest.fn(),
-		}));
 
 		render(<Search close={mockClose} closeOnEnter={mockCloseOnEnter} />);
 
@@ -33,14 +33,6 @@ describe("Search Component", () => {
 	it("calls close function when close button is clicked", async () => {
 		const mockClose = jest.fn();
 		const mockCloseOnEnter = jest.fn();
-
-		// Mock the useRouter implementation
-		const useRouterMock = jest.requireMock("next/router").useRouter;
-		useRouterMock.mockImplementation(() => ({
-			pathname: "/",
-			query: {},
-			push: jest.fn(),
-		}));
 
 		const { getByText } = render(
 			<Search close={mockClose} closeOnEnter={mockCloseOnEnter} />

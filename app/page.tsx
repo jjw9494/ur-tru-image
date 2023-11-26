@@ -25,11 +25,11 @@ export default function Home() {
 
 	return (
 		<>
-			<DynamicNavController
-				filterValue={filterValue}
-				filterFunc={filterValueInput}
-			/>
 			<Suspense fallback={<Loading />}>
+				<DynamicNavController
+					filterValue={filterValue}
+					filterFunc={filterValueInput}
+				/>
 				<DynamicFeed filterValue={filterValue} />
 			</Suspense>
 		</>
