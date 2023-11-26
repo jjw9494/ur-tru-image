@@ -1,34 +1,46 @@
-import { render, fireEvent, screen, cleanup } from "@testing-library/react";
+import { render, fireEvent, screen, waitFor } from "@testing-library/react";
 import Search from "@/app/components/Search";
 import "@testing-library/jest-dom";
-import mockRouter from "next-router-mock";
-import { useRouter } from "next/navigation";
-import { MemoryRouterProvider } from "next-router-mock/MemoryRouterProvider";
 
-//Cleanup
-afterEach(() => {
-	cleanup();
-});
-
-jest.mock("next/navigation", () => jest.requireActual("next-router-mock"));
+// Mock next/router module
+jest.mock("next/router", () => ({
+	useRouter: jest.fn(),
+}));
 
 describe("Search Component", () => {
-	it("renders without crashing and mock functions", () => {
+	it("renders without crashing and mock functions", async () => {
 		const mockClose = jest.fn();
 		const mockCloseOnEnter = jest.fn();
-		mockRouter.push("/");
+
+		// Mock the useRouter implementation
+		const useRouterMock = jest.requireMock("next/router").useRouter;
+		useRouterMock.mockImplementation(() => ({
+			pathname: "/",
+			query: {},
+			push: jest.fn(),
+		}));
 
 		render(<Search close={mockClose} closeOnEnter={mockCloseOnEnter} />);
 
 		const searchContainer = screen.getByTestId("search-container");
 
-		expect(searchContainer).toBeInTheDocument();
+		// Wait for asynchronous operations to complete
+		await waitFor(() => {
+			expect(searchContainer).toBeInTheDocument();
+		});
 	});
 
-	it("calls close function when close button is clicked", () => {
+	it("calls close function when close button is clicked", async () => {
 		const mockClose = jest.fn();
 		const mockCloseOnEnter = jest.fn();
-		mockRouter.push("/");
+
+		// Mock the useRouter implementation
+		const useRouterMock = jest.requireMock("next/router").useRouter;
+		useRouterMock.mockImplementation(() => ({
+			pathname: "/",
+			query: {},
+			push: jest.fn(),
+		}));
 
 		const { getByText } = render(
 			<Search close={mockClose} closeOnEnter={mockCloseOnEnter} />
@@ -37,6 +49,9 @@ describe("Search Component", () => {
 		const closeButton = getByText("CLOSE");
 		fireEvent.click(closeButton);
 
-		expect(mockClose).toHaveBeenCalled();
+		// Wait for asynchronous operations to complete
+		await waitFor(() => {
+			expect(mockClose).toHaveBeenCalled();
+		});
 	});
 });

@@ -1,4 +1,3 @@
-"use client";
 import { useState, useEffect } from "react";
 import "../styles/Feed.css";
 import Masonry from "react-masonry-css";

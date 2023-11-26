@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import Loading from "./loading";
 
 const DynamicNavController = dynamic(
-	() => import("../app/components/NavController"),
+	() => import("./components/NavController"),
 	{
 		ssr: false,
 	}

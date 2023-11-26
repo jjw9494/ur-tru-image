@@ -1,11 +1,13 @@
-"use client";
-import { useState, useEffect } from "react";
+
+import { useState, useEffect, Suspense } from "react";
 import NavHead from "./NavHead";
 import Filter from "./Filter";
 import Menu from "./Menu";
 import Search from "./Search";
 import { navProps } from "../utils/types";
 import { usePathname } from "next/navigation";
+import SearchWrapper from "./SearchWrapper";
+
 
 const NavController: React.FC<navProps> = (props: navProps) => {
 	const [navState, setNavState] = useState("closed");
@@ -79,10 +81,12 @@ const NavController: React.FC<navProps> = (props: navProps) => {
 						/>
 					)}
 					{navState === "search" ? (
-						<Search
-							close={handleCloseButtonClick}
-							closeOnEnter={handleKeyDown}
-						/>
+						<Suspense fallback={null}>
+							<SearchWrapper
+								close={handleCloseButtonClick}
+								closeOnEnter={handleKeyDown}
+							/>
+						</Suspense>
 					) : (
 						""
 					)}
@@ -128,7 +132,12 @@ const NavController: React.FC<navProps> = (props: navProps) => {
 				);
 			} else if (navState === "search") {
 				return (
-					<Search closeOnEnter={handleKeyDown} close={handleCloseButtonClick} />
+					<Suspense fallback={null}>
+						<SearchWrapper
+							closeOnEnter={handleKeyDown}
+							close={handleCloseButtonClick}
+						/>
+					</Suspense>
 				);
 			}
 		}
