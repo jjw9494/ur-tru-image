@@ -6,23 +6,22 @@ import { SearchProps } from "../utils/types";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 const Search: React.FC<SearchProps> = ({ close, closeOnEnter }) => {
-	const router = useRouter();
+
+	// const [searchParams, setSearchParams] = useSearchParams()
 	const pathname = usePathname();
 	const searchParams = useSearchParams()!;
-
-	useEffect(() => {
-		// Access router here
-		console.log(router);
-	}, [router]);
 
 	const createQueryString = React.useCallback(
 		(value: string) => {
 			const params = new URLSearchParams(searchParams);
 			params.set("q", value ?? "");
+
 			return params.toString();
 		},
 		[searchParams]
 	);
+
+	const router = useRouter();
 
 	function handleSearchInputValue(input: string) {
 		const queryString = createQueryString(input);

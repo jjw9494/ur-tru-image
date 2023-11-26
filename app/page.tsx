@@ -2,7 +2,6 @@
 import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
 
-
 import Loading from "./loading";
 
 const DynamicNavController = dynamic(
@@ -17,8 +16,6 @@ const DynamicFeed = dynamic(() => import("./components/Feed"), {
 });
 
 export default function Home() {
-
-
 	const [filterValue, setFilterValue] = React.useState("");
 
 	// Value of Filter input to be passed to Feed
