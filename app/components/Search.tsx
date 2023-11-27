@@ -66,7 +66,7 @@ const Search: React.FC<SearchProps> = ({ close, closeOnEnter }) => {
 				</svg>
 			</div>
 			<div className="search-input-container">
-				<TextField
+				<input type="text"
 					onChange={handleChange}
 					onKeyDown={(e) => {
 						if (e.key === "Enter") {
@@ -77,8 +77,7 @@ const Search: React.FC<SearchProps> = ({ close, closeOnEnter }) => {
 					value={inputValue}
 					className="search-styles"
 					id="search-input"
-					label="Type to search..."
-					variant="standard"
+					
 					placeholder="search"
 					autoFocus
 				/>
