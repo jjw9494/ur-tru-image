@@ -10,6 +10,7 @@
 	background-color: black;
 	overflow: hidden;
 }
+
 #search-input {
 	color: white !important;
 }
@@ -47,7 +48,7 @@
 	padding-left: 2rem;
 }
 
-/* underline */
+underline
 .css-v4u5dn-MuiInputBase-root-MuiInput-root {
 	width: 85%;
 }

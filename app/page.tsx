@@ -1,8 +1,17 @@
 "use client";
 import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
-
+import "./styles/search.css";
 import Loading from "./loading";
+import { StyledEngineProvider } from "@mui/material/styles";
+import muiTheme from "./theme/mui";
+import { CacheProvider } from "@emotion/react";
+import createCache from "@emotion/cache";
+
+const cache = createCache({
+	key: "css",
+	prepend: true,
+});
 
 const DynamicNavController = dynamic(
 	() => import("./components/NavController"),
@@ -25,11 +34,11 @@ export default function Home() {
 
 	return (
 		<>
+			<DynamicNavController
+				filterValue={filterValue}
+				filterFunc={filterValueInput}
+			/>
 			<Suspense fallback={<Loading />}>
-				<DynamicNavController
-					filterValue={filterValue}
-					filterFunc={filterValueInput}
-				/>
 				<DynamicFeed filterValue={filterValue} />
 			</Suspense>
 		</>

@@ -1,6 +1,6 @@
-
 import type { Metadata } from "next";
 import "./globals.css";
+import "./styles/search.css";
 import localFont from "next/font/local";
 
 // Font files can be colocated inside of `app`
@@ -25,3 +25,4 @@ export default function RootLayout({
 		</html>
 	);
 }
+ 

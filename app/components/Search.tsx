@@ -4,6 +4,9 @@ import React, { useEffect, useState } from "react";
 import "../styles/search.css";
 import { SearchProps } from "../utils/types";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { StyledEngineProvider } from "@mui/material";
+import { CacheProvider } from "@emotion/react";
+import createCache from "@emotion/cache";
 
 const Search: React.FC<SearchProps> = ({ close, closeOnEnter }) => {
 	const pathname = usePathname()!;
@@ -18,7 +21,7 @@ const Search: React.FC<SearchProps> = ({ close, closeOnEnter }) => {
 			return params.toString();
 		},
 		[searchParams]
-	);  
+	);
 
 	const [inputValue, setInputValue] = useState("");
 
@@ -38,6 +41,11 @@ const Search: React.FC<SearchProps> = ({ close, closeOnEnter }) => {
 		const { value } = e.target;
 		handleSearchInputValue(value);
 	};
+
+	const cache = createCache({
+		key: "css",
+		prepend: true,
+	});
 
 	return (
 		<div className="search-container" data-testid="search-container">
@@ -66,22 +74,26 @@ const Search: React.FC<SearchProps> = ({ close, closeOnEnter }) => {
 				</svg>
 			</div>
 			<div className="search-input-container">
-				<TextField
-					onChange={handleChange}
-					onKeyDown={(e) => {
-						if (e.key === "Enter") {
-							handleEnter();
-							closeOnEnter(e);
-						}
-					}}
-					value={inputValue}
-					className="search-styles"
-					id="search-input"
-					label="Type to search..."
-					variant="standard"
-					placeholder="search"
-					autoFocus
-				/>
+				<StyledEngineProvider injectFirst>
+					<CacheProvider value={cache}>
+						<TextField
+							onChange={handleChange}
+							onKeyDown={(e) => {
+								if (e.key === "Enter") {
+									handleEnter();
+									closeOnEnter(e);
+								}
+							}}
+							value={inputValue}
+							className="search-styles"
+							id="search-input"
+							label="Type to search..."
+							variant="standard"
+							placeholder="search"
+							autoFocus
+						/>
+					</CacheProvider>
+				</StyledEngineProvider>
 			</div>
 		</div>
 	);
