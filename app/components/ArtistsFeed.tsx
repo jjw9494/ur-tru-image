@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import "../styles/Feed.css";
 import Masonry from "react-masonry-css";
@@ -84,7 +83,7 @@ const ArtistsFeed = () => {
 	return (
 		<>
 			<div className="home__title-div">
-				<h1 className="home__title">ARTISTS.</h1>
+				<h1 className="home__title">Artists.</h1>
 			</div>
 
 			<div className="feed-container" data-testid="artists-feed-container">

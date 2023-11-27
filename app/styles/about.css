@@ -1,6 +1,7 @@
 .about-text {
 	padding-inline: 1rem;
-	padding-block: 3rem;
+	padding-bottom: 1rem;
+	padding-top: 3rem;
 	font-size: 1rem;
 }
 
@@ -29,11 +30,22 @@
 	margin-top: 5rem;
 }
 
+.socials-links {
+	width: 100vw;
+	justify-content: center;
+	display: flex;
+	gap: 2rem;
+	margin-bottom: 3rem;
+	align-items: center;
+}
+
 /* Desktop styles */
 @media (min-width: 1200px) {
 	.about-text {
 		padding-inline: 15rem;
-		padding-bottom: 10rem;
+
+		padding-bottom: 1rem;
+		padding-top: 3rem;
 		font-size: 2rem;
 	}
 

@@ -2,7 +2,6 @@ import { useState, useEffect, Suspense } from "react";
 import NavHead from "./NavHead";
 import Filter from "./Filter";
 import Menu from "./Menu";
-import Search from "./Search";
 import { navProps } from "../utils/types";
 import { usePathname } from "next/navigation";
 import SearchWrapper from "./SearchWrapper";

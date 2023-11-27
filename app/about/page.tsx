@@ -2,7 +2,7 @@
 
 import "../styles/about.css";
 import dynamic from "next/dynamic";
-
+import Image from "next/image";
 const DynamicNavController = dynamic(
 	() => import("../components/NavController"),
 	{
@@ -13,17 +13,8 @@ const DynamicNavController = dynamic(
 export default function About() {
 	return (
 		<>
-			<DynamicNavController
-				
-			
-				filterValue={"filterValue"}
-				filterFunc={() => ""}
-			/>
-			<div className="placeholder-container">
-				<div className="placeholder-photo">
-					<p>placeholder photo</p>
-				</div>
-			</div>
+			<DynamicNavController filterValue={"filterValue"} filterFunc={() => ""} />
+
 			<h1 className="about-title">About.</h1>
 			<h2 className="about-text">
 				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
@@ -48,6 +39,33 @@ export default function About() {
 				cupiditate officia est omnis voluptatibus blanditiis, error obcaecati
 				libero ipsam velit repellendus porro beatae. Dolor, itaque explicabo.
 			</h2>
+			<nav className="socials-links">
+				<a href="#">
+					<Image
+						height={80}
+						width={80}
+						src="/images/icons8-bandcamp-100.png"
+						alt="bandcamp link"
+					/>
+				</a>
+				<a href="#">
+					{/* eslint-disable-next-line @next/next/no-img-element */}
+					<Image
+						height={60}
+						width={60}
+						src="/images/icons8-instagram-100.png"
+						alt="instagram link"
+					/>
+				</a>
+				<a href="#">
+					<Image
+						height={60}
+						width={60}
+						src="/images/icons8-email-100.png"
+						alt="email link"
+					/>
+				</a>
+			</nav>
 		</>
 	);
 }

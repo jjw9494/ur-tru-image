@@ -1,6 +1,5 @@
 "use client";
-import TextField from "@mui/material/TextField";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../styles/search.css";
 import { SearchProps } from "../utils/types";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
