@@ -287,7 +287,7 @@ const Feed: React.FC<feedProps> = ({ filterValue }) => {
 		<>
 			<div className="home__title-div">
 				<h1 className="home__title">
-					London Record Label & Occasional Function.
+					Multidisciplinary collective and occasional function.
 				</h1>
 			</div>
 			{updatedSearchParams && (

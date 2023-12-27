@@ -85,7 +85,7 @@ const Filter: React.FC<FilterProps> = ({ close, filterFunc }) => {
 					width="70"
 					height="70"
 					alt="Ur Tru Image Logo"
-					src="/images/ur-tru-image-logo.png"
+					src="/images/Ur Tru Image Logo See through v2.png"
 				/>
 				<div className="close-button-container">
 					<label htmlFor="close-filter-button">

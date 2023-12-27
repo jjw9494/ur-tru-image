@@ -103,6 +103,9 @@ h3 {
 	padding-bottom: 0.4rem;
 }
 
+.home__title {
+	padding-inline: 1rem;
+}
 /* Desktop Styles */
 
 @media (min-width: 840px) {

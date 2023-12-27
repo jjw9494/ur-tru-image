@@ -28,7 +28,7 @@ const NavHead: React.FC<NavHeadProps> = (props: NavHeadProps) => {
 						width="70"
 						height="70"
 						alt="Ur Tru Image Logo"
-						src="/images/ur-tru-image-logo.png"
+						src="/images/Ur Tru Image Logo See through v2.png"
 					/>
 				</a>
 				<div className="buttons-container">
