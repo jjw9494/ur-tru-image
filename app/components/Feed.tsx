@@ -290,6 +290,11 @@ const Feed: React.FC<feedProps> = ({ filterValue }) => {
 					London Record Label & Occasional Function.
 				</h1>
 			</div>
+			{updatedSearchParams && (
+				<h2 className="search-info">
+					Searching - "{updatedSearchParams}"
+				</h2>
+			)}
 			{renderFeed.length === 0 ? (
 				<>
 					<br></br>

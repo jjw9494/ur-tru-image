@@ -50,6 +50,11 @@ h3 {
 	margin-inline: 1rem;
 }
 
+.search-info {
+	font-size: 24px;
+	margin-bottom: 3rem;
+}
+
 /* Card styles */
 
 .card {
@@ -152,6 +157,11 @@ h3 {
 
 	a {
 		font-size: 2rem;
+	}
+
+	.search-info {
+		font-size: 32px;
+		margin-bottom: 3rem;
 	}
 
 	/* Main Title styles */
