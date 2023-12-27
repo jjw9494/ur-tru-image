@@ -292,6 +292,7 @@ const Feed: React.FC<feedProps> = ({ filterValue }) => {
 			</div>
 			{updatedSearchParams && (
 				<h2 className="search-info">
+					{/* eslint-disable-next-line react/no-unescaped-entities */}
 					Searching - "{updatedSearchParams}"
 				</h2>
 			)}
