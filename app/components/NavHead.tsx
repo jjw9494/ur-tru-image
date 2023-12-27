@@ -9,7 +9,11 @@ const NavHead: React.FC<NavHeadProps> = (props: NavHeadProps) => {
 	const pathname = usePathname();
 	return (
 		<nav>
-			<div className="nav-container" data-testid="nav-container">
+			<div
+				className="nav-container"
+				data-testid="nav-container"
+				style={{ display: "flex", justifyContent: "space-between" }}
+			>
 				<a>
 					{/* <svg fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -20,17 +24,18 @@ const NavHead: React.FC<NavHeadProps> = (props: NavHeadProps) => {
 						/>
 					</svg> */}
 					<Image
+						className="yti-logo"
 						width="70"
 						height="70"
 						alt="Ur Tru Image Logo"
 						src="/images/ur-tru-image-logo.png"
-						sizes="60vw"
-						style={{
-							display: "flex",
-							justifyContent: "start",
-							width: "20%",
-							height: "20%",
-						}}
+						// sizes="70vw"
+						// style={{
+						// 	display: "flex",
+						// 	justifyContent: "start",
+						// 	width: "20%",
+						// 	height: "20%",
+						// }}
 					/>
 				</a>
 				<div className="buttons-container">
