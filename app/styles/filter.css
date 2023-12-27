@@ -28,6 +28,13 @@
 	padding-left: 1rem;
 }
 
+.yti-logo-menu {
+	height: 45px;
+	width: 45px;
+	padding-left: 1rem;
+	margin-top: -0.3rem;
+}
+
 /* Close button styles */
 
 .close-button-container {
