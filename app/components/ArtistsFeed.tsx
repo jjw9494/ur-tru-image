@@ -16,7 +16,7 @@ const ArtistsFeed = () => {
 					"https://api-eu-west-2.hygraph.com/v2/clolirkf98got01t7dvsr8g2j/master",
 					`
 					query MyQuery {
-						tArtistsObjects {
+						tArtistsObjects (first: 100) {
 						  id
 						  imageDescription
 						  linkTitle
