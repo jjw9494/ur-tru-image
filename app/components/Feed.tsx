@@ -17,7 +17,7 @@ const Feed: React.FC<feedProps> = ({ filterValue }) => {
 					"https://api-eu-west-2.hygraph.com/v2/clolirkf98got01t7dvsr8g2j/master",
 					`
 			  query TFeedObjects {
-				tFeedObjects {
+				tFeedObjects (first: 100) {
 				  contentType
 				  createdAt
 				  dateAdded
