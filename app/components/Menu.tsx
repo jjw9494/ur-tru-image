@@ -67,9 +67,7 @@ const Menu: React.FC<MenuProps> = (props: MenuProps) => {
 					<Link href="/artists">
 						<li>Artists</li>
 					</Link>
-					<a href="https://tobagotracks.bandcamp.com/music" target="_blank">
-						<li>Shop</li>
-					</a>
+
 					<Link href="/about">
 						<li>About</li>
 					</Link>

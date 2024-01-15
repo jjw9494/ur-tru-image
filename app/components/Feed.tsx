@@ -277,7 +277,7 @@ const Feed: React.FC<feedProps> = ({ filterValue }) => {
 				{e.subheading ? <h3>{e.subheading}</h3> : ""}
 				<span className="type-date-span">
 					{getEventImageUrl(e.contentType)}
-					<p>· {"Added " + e.dateAdded}</p>
+					{/* <p>· {"Added " + e.dateAdded}</p> */}
 				</span>
 			</div>
 		));
@@ -286,9 +286,34 @@ const Feed: React.FC<feedProps> = ({ filterValue }) => {
 	return (
 		<>
 			<div className="home__title-div">
-				<h1 className="home__title">
-					Multidisciplinary collective and occasional function.
-				</h1>
+				{/* <h1 className="home__title"> */}{" "}
+				<a
+					className="home__title_links"
+					href="https://allcentre.bandcamp.com/"
+					target="_blank"
+				>
+					All Centre
+				</a>
+				<br></br>
+				<br></br>
+				<a
+					className="home__title_links"
+					href="https://tobagotracks.bandcamp.com/"
+					target="_blank"
+				>
+					TT
+				</a>
+				<br></br>
+				<a
+					className="home__title_links"
+					href="https://www.patreon.com/CloutFarm"
+					target="_blank"
+				>
+					Clout Farm
+				</a>
+				<br></br>
+				<br></br>
+				{/* </h1> */}
 			</div>
 			{updatedSearchParams && (
 				<h2 className="search-info">

@@ -7,7 +7,7 @@
 	background-color: black;
 	color: white;
 	display: flex;
-	min-height: 390px;
+	min-height: 500px;
 	flex-direction: column;
 	padding-top: 1.25rem;
 }
@@ -67,7 +67,7 @@ ul {
 }
 
 .menu-links {
-	height: 270px;
+	height: 100px;
 }
 
 .menu-links > ul > a:visited {
@@ -94,6 +94,7 @@ ul {
 
 	.menu-links {
 		padding-right: 2rem;
+		height: 100px;
 	}
 
 	.menu-links > ul {
@@ -117,6 +118,7 @@ ul {
 	.menu-container {
 		background-color: transparent;
 		color: rgb(16, 15, 15);
+		min-height: 100px;
 	}
 	.menu-links > ul > a:visited {
 		color: rgb(0, 0, 0);
@@ -139,10 +141,12 @@ ul {
 @media (min-width: 720px) and (max-width: 840px) {
 	.menu-links {
 		padding-right: 2rem;
+		height: 100px;
 	}
 
 	.menu-container {
 		padding-top: 0;
+		height: 10px;
 	}
 
 	.menu-links > ul {
