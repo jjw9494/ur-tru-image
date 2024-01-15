@@ -295,7 +295,6 @@ const Feed: React.FC<feedProps> = ({ filterValue }) => {
 					All Centre
 				</a>
 				<br></br>
-				<br></br>
 				<a
 					className="home__title_links"
 					href="https://tobagotracks.bandcamp.com/"

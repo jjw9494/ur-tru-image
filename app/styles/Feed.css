@@ -115,7 +115,7 @@ h3 {
 	font-size: 2rem;
 	color: black;
 	padding-inline: 5rem;
-	padding-bottom: 4rem;
+	/* padding-bottom: 4rem; */
 }
 
 .home__title_links:hover {
@@ -125,12 +125,6 @@ h3 {
 }
 
 /* Desktop Styles */
-
-@media (min-width: 720px) {
-	.home__title_links {
-		font-size: 2rem;
-	}
-}
 
 @media (min-width: 840px) {
 	body {
@@ -232,5 +226,11 @@ h3 {
 	.type-date-span > svg > g {
 		height: 90px;
 		width: 90px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.home__title_links {
+		font-size: 2rem;
 	}
 }
