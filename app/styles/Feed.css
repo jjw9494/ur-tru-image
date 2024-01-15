@@ -75,7 +75,8 @@ h3 {
 	display: flex;
 	margin: 0;
 	align-items: center;
-	gap: 0.4rem;
+	gap: 0.8rem;
+	padding-top: 0.5rem;
 }
 
 .type-date-span > svg {
@@ -106,7 +107,30 @@ h3 {
 .home__title {
 	padding-inline: 1rem;
 }
+
+.home__title_links {
+	list-style: none;
+	text-decoration: none;
+	display: inline;
+	font-size: 2rem;
+	color: black;
+	padding-inline: 5rem;
+	padding-bottom: 4rem;
+}
+
+.home__title_links:hover {
+	text-decoration: underline;
+	text-underline-offset: 10px;
+	transition: width 1s;
+}
+
 /* Desktop Styles */
+
+@media (min-width: 720px) {
+	.home__title_links {
+		font-size: 2rem;
+	}
+}
 
 @media (min-width: 840px) {
 	body {
@@ -179,6 +203,16 @@ h3 {
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+	}
+
+	.home__title_links {
+		list-style: none;
+		text-decoration: none;
+		display: inline;
+		font-size: 3rem;
+		color: black;
+		padding-inline: 5rem;
+		padding-bottom: 4rem;
 	}
 
 	/* Card styles */
