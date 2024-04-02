@@ -81,11 +81,11 @@ const Filter: React.FC<FilterProps> = ({ close, filterFunc }) => {
 					/>
 				</svg> */}
 				<Image
-					className="yti-logo-menu"
+					className="yti-logo-filters"
 					width="70"
 					height="70"
 					alt="Ur Tru Image Logo"
-					src="/images/Ur Tru Image Logo See through v2.png"
+					src="/images/ur-tru-image-logo.png"
 				/>
 				<div className="close-button-container">
 					<label htmlFor="close-filter-button">

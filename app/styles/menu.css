@@ -48,8 +48,8 @@
 }
 
 .yti-logo-menu {
-	padding-top: 5px;
-	margin-left: 0px;
+	/* padding-top: 5px; */
+	padding-left: 10px;
 	height: 45px;
 	width: 100%;
 	filter: invert(1);
