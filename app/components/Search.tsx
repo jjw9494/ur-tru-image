@@ -17,7 +17,7 @@ const Search: React.FC<SearchProps> = ({ close, closeOnEnter }) => {
 			return params.toString();
 		},
 		[searchParams]
-	);  
+	);
 
 	const [inputValue, setInputValue] = useState("");
 
@@ -65,7 +65,8 @@ const Search: React.FC<SearchProps> = ({ close, closeOnEnter }) => {
 				</svg>
 			</div>
 			<div className="search-input-container">
-				<input type="text"
+				<input
+					type="text"
 					onChange={handleChange}
 					onKeyDown={(e) => {
 						if (e.key === "Enter") {
@@ -76,7 +77,6 @@ const Search: React.FC<SearchProps> = ({ close, closeOnEnter }) => {
 					value={inputValue}
 					className="search-styles"
 					id="search-input"
-					
 					placeholder="search"
 					autoFocus
 				/>

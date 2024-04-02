@@ -17,24 +17,28 @@ export default function About() {
 
 			<h1 className="about-title">About.</h1>
 			<h2 className="about-text">
-				ur tru image is a multidisciplinary collective overseeing three cultural
-				initiatives: TT, All Centre and Clout Farm.
+				ur tru image represents individual identity within sound, media and
+				community - connecting an international nexus of artists, collectives
+				and friends.
 				<br></br>
 				<br></br>
-				Each platform serves their individual identity through sound, media and
-				community - connecting an international nexus of artists and friends,
-				with a easy approach to the sound and space.
+				We engage in fellow-feeling collaboration, developing our initiatives to
+				shape the ever-evolving scene.
 				<br></br>
+				<br></br>A space for sincere expression, providing an ecosystem that our
+				community can explore and enjoy.
 				<br></br>
-				We develop our output to adapt to the ever-evolving scene; featuring
-				artists whos sincere approach to sonic expression provides an ecosystem
-				that our community can explore.
+				<br></br>—<br></br>
+				<br></br>
+				TT Label, All Centre and Clout Farm
 				<br></br>
 				<br></br>
 				<a href="mailto:sophia@urtruimage.com">sophia@urtruimage.com</a>
 				<br></br>
 				<br></br>
 				<a href="mailto:rob@urtruimage.com">rob@urtruimage.com</a>
+				<br></br>
+				<br></br>
 			</h2>
 			{/* <nav className="socials-links">
 				<a href="#">

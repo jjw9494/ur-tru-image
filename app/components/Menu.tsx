@@ -25,7 +25,7 @@ const Menu: React.FC<MenuProps> = (props: MenuProps) => {
 						width="70"
 						height="70"
 						alt="Ur Tru Image Logo"
-						src="/images/Ur Tru Image Logo See through v2.png"
+						src="/images/ur-tru-image-logo.png"
 					/>
 				</Link>
 				<div className="close-button-container">

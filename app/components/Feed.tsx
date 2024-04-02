@@ -235,9 +235,9 @@ const Feed: React.FC<feedProps> = ({ filterValue }) => {
 		.filter((e) => {
 			return searchWords.every(
 				(word: string) =>
-					e.mainTitle.toLowerCase().includes(word) ||
-					e.subheading.toLowerCase().includes(word) ||
-					e.contentType.toLowerCase().includes(word)
+					e.mainTitle?.toLowerCase().includes(word) ||
+					e.subheading?.toLowerCase().includes(word) ||
+					e.contentType?.toLowerCase().includes(word)
 			);
 		})
 		// Map out Array into HTML format

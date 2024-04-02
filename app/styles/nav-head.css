@@ -1,9 +1,9 @@
 /* Container styles */
 .nav-container {
-	display: flex;
+	/* display: flex; */
 	height: 45px;
-	flex-direction: row;
-	justify-content: space-between;
+	/* flex-direction: row; */
+	/* justify-content: space-between; */
 	margin-block: 1.25rem;
 	margin-inline: 1rem;
 	align-items: center;
@@ -16,15 +16,16 @@
 } */
 
 .nav-container > a > Image {
-	padding-top: 7px;
+	padding-top: 70px;
 	height: 25px;
 	width: 22px;
-	transform: scale(0.65);
+	/* transform: scale(0.65); */
 }
 
 .yti-logo {
+	padding-top: 8px;
 	height: 45px;
-	width: 45px;
+	width: 100%;
 }
 /* Menu/Filter button styles */
 
@@ -70,15 +71,17 @@
 	} */
 
 	.yti-logo {
-		height: 85px;
-		width: 85px;
+		height: 75px;
+		width: 100%;
 	}
 
-	.nav-container > a > Image {
-		transform: scale(1.5);
-	}
+	/* .nav-container > a > Image {
+		transform: scale(1.5); 
+	} */
 
 	.nav-container {
+		padding-left: 30px;
+		padding-top: 10px;
 		height: 66px;
 		margin-block: 2rem;
 	}
@@ -105,14 +108,16 @@
 		padding-left: 1rem;
 	} */
 
-	.nav-container > a > Image {
+	/* .nav-container > a > Image {
 		width: 106.5px;
 		padding-left: 1rem;
-	}
+	} */
 
 	.yti-logo {
-		height: 65px;
-		width: 65px;
+		padding-left: 20px;
+		padding-top: 25px;
+		height: 45px;
+		width: 100%;
 	}
 
 	.menu-links {

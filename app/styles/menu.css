@@ -7,7 +7,7 @@
 	background-color: black;
 	color: white;
 	display: flex;
-	min-height: 390px;
+	min-height: 350px;
 	flex-direction: column;
 	padding-top: 1.25rem;
 }
@@ -48,10 +48,11 @@
 }
 
 .yti-logo-menu {
+	padding-top: 5px;
+	margin-left: 0px;
 	height: 45px;
-	width: 45px;
-	padding-left: 1rem;
-	margin-top: -0.3rem;
+	width: 100%;
+	filter: invert(1);
 }
 
 /* Link styles */

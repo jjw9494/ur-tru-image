@@ -25,10 +25,10 @@ const NavHead: React.FC<NavHeadProps> = (props: NavHeadProps) => {
 					</svg> */}
 					<Image
 						className="yti-logo"
-						width="70"
-						height="70"
+						width="100"
+						height="100"
 						alt="Ur Tru Image Logo"
-						src="/images/Ur Tru Image Logo See through v2.png"
+						src="/images/ur-tru-image-logo.png"
 					/>
 				</a>
 				<div className="buttons-container">
