@@ -25,8 +25,8 @@ const NavHead: React.FC<NavHeadProps> = (props: NavHeadProps) => {
 					</svg> */}
 					<Image
 						className="yti-logo"
-						width="100"
-						height="100"
+						width="286"
+						height="83"
 						alt="Ur Tru Image Logo"
 						src="/images/ur-tru-image-logo.png"
 					/>
