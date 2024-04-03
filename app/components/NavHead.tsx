@@ -9,6 +9,7 @@ const NavHead: React.FC<NavHeadProps> = (props: NavHeadProps) => {
 	const pathname = usePathname();
 	return (
 		<nav>
+			
 			<div
 				className="nav-container"
 				data-testid="nav-container"
