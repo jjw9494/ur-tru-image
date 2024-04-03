@@ -29,7 +29,7 @@ const Search: React.FC<SearchProps> = ({ close, closeOnEnter }) => {
 		const queryString = createQueryString(inputValue);
 		router.push(pathname + "?" + queryString, {
 			scroll: false,
-			shallow: false,
+			// shallow: false,
 		});
 	};
 
